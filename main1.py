@@ -67,12 +67,11 @@ if st.button("calcular"):
     else:
         st.error("Por favor, insire valores válidos!")  # mensagem de erro 
  
-
 # INOFRMAÇÕES 
 st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICAR AS INFO
 
 # tabela IMC 
-path = 'H:/calculadora=imc/WhatsApp Image 2024-12-06 at 14.41.49.jpeg'
+path = 'H:\calculadora=imc\image.jpeg'
 imagem = Image.open(path)
 st.image(imagem, caption = "Dados do MEC", width = 830)
 
@@ -90,7 +89,7 @@ tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
 with tab1:
     st.header("Obesidade Infaltil")
     # imagem sobre o tema:
-    st.image('c:/Users/24271526/Downloads/WhatsApp Image 2024-12-06 at 14.40.40.jpeg', width = 10000)
+    st.image('H:\calculadora=imc\image1.jpeg', width = 10000)
     st.markdown("""Obesidade infantil é uma condição em que uma criança tem um peso acima do normal para a sua idade e altura. De acordo com a OMS, uma criança é considerada obesa quando o seu IMC está acima do percentil 97 para o seu sexo e idade. 
 A obesidade infantil é um problema de saúde pública complexo que pode levar a uma série de doenças crônicas, como:
 Diabetes, Colesterol alto, Hipertensão, Doenças cardiovasculares, Câncer, Doenças respiratórias. 
