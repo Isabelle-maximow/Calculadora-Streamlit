@@ -59,11 +59,9 @@ if st.button("calcular"):
         # dividir a kinha em duas colunas
         col1, col2 = st.columns(2)
         
-       
         col1.metric("Classificação", classe)  
         col2.metric("IMC", f"{imc:.2f}")
             
-       
         st.divider()
 
     else:
