@@ -37,6 +37,7 @@ streamlit run main.py
 
 ## 📝 Funcionalidades
 - Entrada de dados: Permite que o usuário insira seu peso (em kg) e altura (em metros).
+- Comparação com IMC ideal: O valor calculado é comparado com o IMC ideal de 21.7.
 - Cálculo do IMC: O aplicativo calcula o IMC com base nos dados fornecidos e classifica em uma das categorias abaixo.
 - Classificação do IMC:
     - Abaixo do peso
@@ -44,4 +45,3 @@ streamlit run main.py
     - Sobrepeso
     - Obesidade
     - Obesidade mórbida
-- Comparação com IMC ideal: O valor calculado é comparado com o IMC ideal de 21.7.
