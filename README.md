@@ -7,6 +7,7 @@ Desenvolvido com a biblioteca Streamlit, este projeto apresenta uma página inte
 - **Python**: Linguagem principal para lógica.
 - **Streamlit**: Framework para criação de interfaces web interativas.
 - **Pillow**: Biblioteca de manipulação de imagens.
+- **HTML**: Utilizado para o footer
 
 ## 💻 Como Rodar o Projeto
 
