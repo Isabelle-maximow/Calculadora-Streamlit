@@ -14,7 +14,7 @@ Desenvolvido com a biblioteca Streamlit, este projeto apresenta uma página inte
 ### Passo a Passo:
 1. Clone este repositório:
 ```bash
-git clone https://github.com/seu-usuario/calculadora-Streamlit.git
+git clone (https://github.com/Isabelle-maximow/Calculadora-Streamlit.git)
 cd calculadora-Streamlit
 ```
 2. Crie um ambiente virtual (opcional, mas recomendado):
