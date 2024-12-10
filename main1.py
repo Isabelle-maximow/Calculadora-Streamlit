@@ -118,7 +118,7 @@ with tab2:
         st.text('O baixo peso, ou desnutrição, pode ser tão prejudicial quanto o excesso de peso e está associado a uma série de problemas de saúde que afetam tanto o corpo quanto a mente. Indivíduos com baixo peso podem ter um sistema imunológico enfraquecido, tornando-os mais vulneráveis a infecções e doenças, já que a falta de nutrientes essenciais compromete as defesas naturais do organismo. Além disso, a desnutrição pode levar a deficiências vitamínicas e minerais, resultando em condições como anemia, que causa fadiga e fraqueza, e osteoporose, que aumenta o risco de fraturas ósseas. O baixo peso também pode impactar o desenvolvimento físico e cognitivo em crianças e adolescentes, resultando em dificuldades de aprendizado e crescimento inadequado. Em adultos, essa condição pode causar problemas de fertilidade e complicações durante a gravidez, tanto para a mãe quanto para o bebê. Além das implicações físicas, o baixo peso pode afetar a saúde mental, contribuindo para condições como depressão e ansiedade. Portanto, é fundamental buscar uma alimentação equilibrada e nutritiva para garantir que o corpo receba os nutrientes necessários para funcionar adequadamente e manter uma boa saúde geral. ')
 
 
-# cabe
+# cabecalho com link
 footer="""<style>
 a:link , a:visited{
 color: red;
