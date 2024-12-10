@@ -32,7 +32,7 @@ pip install pillow
 
 4. Inicie o aplicativo
 ```bash	
-streamlit run main.py
+streamlit run main1.py
 ```
 
 ## 📝 Funcionalidades
