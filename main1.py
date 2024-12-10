@@ -1,5 +1,7 @@
 import streamlit as st  # usar a abreviação
 from PIL import Image  # para importar imagens
+import html 
+
 
 with st.sidebar:                 #criar barra lateral - fica na esqurda td q esta dentro dele
     # logo e link ao clicar 
@@ -31,6 +33,7 @@ with st.sidebar:                 #criar barra lateral - fica na esqurda td q est
         - **Peso ideal**: IMC entre 20 e 24.9
         
         - **Sobrepeso**: IMC entre 25 e 29.9
+    
         
         - **Obesidade**: IMC entre 30 e 35
         
@@ -82,9 +85,9 @@ if st.button("calcular"):
 st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICAR AS INFO
 
 # tabela IMC 
-path = 'H:\calculadora=imc\image.jpeg'
+path = 'image.jpeg'
 imagem = Image.open(path)
-st.image(imagem, caption = "Dados do MEC", width = 830)
+st.image(imagem, caption = "Dados do MEC", width = 500)
 
 
 # TABS 
@@ -93,23 +96,53 @@ tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
 # conteudo dos tabs 
 with tab1:
     st.header("Obesidade Infaltil")
-    # imagem sobre o tema:
-    st.image('H:\calculadora=imc\image1.jpeg', width = 10000)
     st.markdown("""Obesidade infantil é uma condição em que uma criança tem um peso acima do normal para a sua idade e altura. De acordo com a OMS, uma criança é considerada obesa quando o seu IMC está acima do percentil 97 para o seu sexo e idade. 
 A obesidade infantil é um problema de saúde pública complexo que pode levar a uma série de doenças crônicas, como:
 Diabetes, Colesterol alto, Hipertensão, Doenças cardiovasculares, Câncer, Doenças respiratórias. 
 Além disso, a obesidade infantil pode causar problemas psicológicos, como depressão, baixa autoestima e isolamento social. """)      
+     # imagem sobre o tema:
+    st.image('image1.jpeg', width = 900)
     
     with st.expander ("***A importancia de uma alimentação saudavel na infâcia***", expanded = False):
-        st.text('Segundo Sônia Venâncio, do Instituto de Saúde Pública da Secretaria Estadual de Saúde de São Paulo, a alimentação adequada e saudável nos primeiros 2 anos de vida vai garantir que a criança receba todos os nutrientes necessários para o seu crescimento e também o seu desenvolvimento.')
+        st.text('A alimentação saudável na infância é crucial para o desenvolvimento físico e mental das crianças. Nutrientes adequados são essenciais para o crescimento, fortalecendo o sistema imunológico e prevenindo doenças. Hábitos alimentares saudáveis formados na infância ajudam a reduzir o risco de problemas como obesidade e diabetes na vida adulta. Além disso, uma dieta nutritiva melhora o desempenho escolar e as habilidades cognitivas. Investir em uma boa alimentação desde cedo garante que as crianças cresçam fortes, saudáveis e preparadas para o futuro.')
      
     with st.expander ("***Esportes na infância***", expanded = False):
         st.text('O esporte melhora a coordenação motora e aprimora a cognição de crianças e adolescentes. Os esportes auxiliam as crianças e adolescentes a desenvolverem as habilidades necessárias para praticá-los. Todo o conhecimento aprendido também possui um papel fundamental na capacidade cognitiva.')
 
 with tab2:
     st.header("Doenças Relacionadas")
+    st.text('O peso corporal é crucial para a saúde e pode afetar o desenvolvimento de doenças.')
     with st.expander("***Doenças causadas ao peso excessivo***"):
         st.text('O excesso de peso, ou obesidade, é um problema de saúde que vai além da estética, pois está associado a várias doenças e condições que afetam a qualidade de vida, como problemas cardiovasculares, diabetes tipo 2, dores nas articulações e doenças respiratórias. O acúmulo de gordura sobrecarrega o sistema cardiovascular, aumentando a pressão arterial e os níveis de colesterol, o que eleva o risco de doenças cardíacas e derrames. Além disso, a resistência à insulina causada pelo excesso de gordura abdominal pode levar ao diabetes tipo 2 e suas complicações. As articulações, especialmente joelhos e quadris, também sofrem com a pressão adicional, aumentando o risco de osteoartrite. A saúde respiratória é impactada, contribuindo para condições como apneia do sono. Não menos importante, a obesidade pode afetar a saúde mental, levando a questões como ansiedade e depressão devido ao estigma social e à baixa autoestima. Portanto, adotar um estilo de vida saudável com alimentação balanceada e atividade física regular é fundamental para prevenir essas doenças associadas ao excesso de peso e investir no bem-estar físico e emocional. ')
     with st.expander("***Doenças causadas pelo baixo peso***"):
         st.text('O baixo peso, ou desnutrição, pode ser tão prejudicial quanto o excesso de peso e está associado a uma série de problemas de saúde que afetam tanto o corpo quanto a mente. Indivíduos com baixo peso podem ter um sistema imunológico enfraquecido, tornando-os mais vulneráveis a infecções e doenças, já que a falta de nutrientes essenciais compromete as defesas naturais do organismo. Além disso, a desnutrição pode levar a deficiências vitamínicas e minerais, resultando em condições como anemia, que causa fadiga e fraqueza, e osteoporose, que aumenta o risco de fraturas ósseas. O baixo peso também pode impactar o desenvolvimento físico e cognitivo em crianças e adolescentes, resultando em dificuldades de aprendizado e crescimento inadequado. Em adultos, essa condição pode causar problemas de fertilidade e complicações durante a gravidez, tanto para a mãe quanto para o bebê. Além das implicações físicas, o baixo peso pode afetar a saúde mental, contribuindo para condições como depressão e ansiedade. Portanto, é fundamental buscar uma alimentação equilibrada e nutritiva para garantir que o corpo receba os nutrientes necessários para funcionar adequadamente e manter uma boa saúde geral. ')
-        
+
+
+footer="""<style>
+a:link , a:visited{
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+a:hover,  a:active {
+color: red;
+background-color: transparent;
+text-decoration: underline;
+}
+
+.footer {
+position: relative;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: white;
+color: black;
+text-align: center;
+}
+</style>
+<div class="footer">
+<p>Desenvolvido por <a style='display: block; text-align: center;' href="https://www.linkedin.com/in/isabelle-ferreira-316351300/" target="_blank">Isabelle Ferreira S</a></p>
+</div>
+"""
+st.markdown(footer,unsafe_allow_html=True)
