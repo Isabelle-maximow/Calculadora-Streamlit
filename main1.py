@@ -43,52 +43,52 @@ with st.sidebar:                 #criar barra lateral - fica na esqurda td q est
 st.title("Calculadora IMC")   # titulo
 
 # CRIANDO A ENTRADA DE DADOS - PESO
+# colunas 1 e 2
 
-peso = st.number_input(label = "Digite o seu peso atual: ",min_value = 0.0, step = 0.10, format = "%.1f" )  # "label" é para criar o titulo do input // min_value é o valo9r minimo // format formata as casas decimais
+col1, col2 = st.columns(2)
 
-altura = st.number_input(label = "Digite a sua altura atual em metros: ",min_value = 0.0, step = 0.10, format = "%.2f" )  
+# coluna 1:
+with col1:
+    peso = st.number_input(label = "Digite o seu peso atual: ",min_value = 0.0, step = 0.10, format = "%.1f" )  # "label" é para criar o titulo do input // min_value é o valo9r minimo // format formata as casas decimais
 
-if st.button("calcular"):
-    if peso > 0 and altura > 0: 
-        imc = peso / (altura ** 2)
-        imc_ideal = 21.7
-        imc_delta = imc - imc_ideal
-        if imc < 18.5:
-            classe = "Abaixo do peso"
-        elif imc > 20 and imc < 24.9 :
-            classe = "Peso ideal"
-        elif imc > 25 and imc < 29.9:
-            classe = "Sobrepeso"
-        elif imc > 30 and imc < 35:
-            classe = "Obesidade"
+    altura = st.number_input(label = "Digite a sua altura atual em metros: ",min_value = 0.0, step = 0.10, format = "%.2f" )  
+
+    if st.button("calcular"):
+        if peso > 0 and altura > 0: 
+            imc = peso / (altura ** 2)
+            imc_ideal = 21.7
+            imc_delta = imc - imc_ideal
+            if imc < 18.5:
+                classe = "Abaixo do peso"
+            elif imc > 20 and imc < 24.9 :
+                classe = "Peso ideal"
+            elif imc > 25 and imc < 29.9:
+                classe = "Sobrepeso"
+            elif imc > 30 and imc < 35:
+                classe = "Obesidade"
+            else:
+                classe = "Obsedidade morbida"
+            st.success("Calculo feito com sucesso!")   # msg de acerto 
+
+            # escrever valores 
+            st.write(f"seu imc é: **{imc:.2f}**")
+            st.write(f"sua classe é: {classe}")
+            st.write(f"Comparação com o IMC ideal: **{imc_delta:.2f}**")    # o :.2f é para arredondar 
+
         else:
-            classe = "Obsedidade morbida"
-        st.success("Calculo feito com sucesso!")   # msg de acerto 
-
-        # escrever valores 
-        st.write(f"seu imc é: {imc:.2f}")
-        st.write(f"sua classe é: {classe}")
-        st.write(f"Comparação com o IMC ideal: **{imc_delta:.2f}**")    # o :.2f é para arredondar 
-
-        # dividir a kinha em duas colunas
-        col1, col2 = st.columns(2)
-        
-        col1.metric("Classificação", classe)  
-        col2.metric("IMC", f"{imc:.2f}")
-            
-        st.divider()
-
-    else:
-        st.error("Por favor, insire valores válidos!")  # mensagem de erro 
+            st.error("Por favor, insire valores válidos!")  # mensagem de erro 
  
-# INOFRMAÇÕES 
-st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICAR AS INFO
-
 # tabela IMC 
-path = 'image.jpeg'
-imagem = Image.open(path)
-st.image(imagem, caption = "Dados do MEC", width = 500)
+# coluna 2
+with col2:
+    divider = 'blue' 
+    col2.subheader("Confira a tebela completa com as medidas IMC!")
+    path = 'image.jpeg'
+    imagem = Image.open(path)
+    st.image(imagem, caption = "Dados do MEC", width = 500)
 
+# INFORMAÇÕES 
+st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICAR AS INFO
 
 # TABS 
 tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
