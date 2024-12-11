@@ -27,8 +27,9 @@ source venv/bin/activate  # Para Linux/Mac
 
 3. Instale as dependências:
 ```bash
-pip install streamlit
-pip install pillow
+import streamlit as st 
+from PIL import Image  
+import html 
 ```
 
 4. Inicie o aplicativo
