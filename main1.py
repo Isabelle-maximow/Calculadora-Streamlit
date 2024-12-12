@@ -6,7 +6,7 @@ import html
 with st.sidebar:                 #criar barra lateral - fica na esqurda td q esta dentro dele
     # logo e link ao clicar 
     st.logo('https://logospng.org/download/sus-sistema-Unico-de-saude/sus-sistema-unico-de-saude-2048.png',
-    link = 'https://www.gov.br/saude/pt-br/sus' )       
+    link = 'https://www.gov.br/saude/pt-br/sus')       
            
     # titulo
     st.title(" ***CALCULADORA IMC***")  
@@ -40,7 +40,6 @@ with st.sidebar:                 #criar barra lateral - fica na esqurda td q est
         - **Obesidade mórbida**: IMC acima de 35         
         """) # ** usando para deixar em negrito 
     
-st.title("Calculadora IMC")   # titulo
 
 # CRIANDO A ENTRADA DE DADOS - PESO
 # colunas 1 e 2
@@ -49,6 +48,8 @@ col1, col2 = st.columns(2)
 
 # coluna 1:
 with col1:
+    
+    col1.subheader("Calcule seu IMC:")   # titulo
     peso = st.number_input(label = "Digite o seu peso atual: ",min_value = 0.0, step = 0.10, format = "%.1f" )  # "label" é para criar o titulo do input // min_value é o valo9r minimo // format formata as casas decimais
 
     altura = st.number_input(label = "Digite a sua altura atual em metros: ",min_value = 0.0, step = 0.10, format = "%.2f" )  
@@ -81,14 +82,13 @@ with col1:
 # tabela IMC 
 # coluna 2
 with col2:
-    divider = 'blue' 
     col2.subheader("Confira a tebela completa com as medidas IMC!")
     path = 'image.jpeg'
     imagem = Image.open(path)
     st.image(imagem, caption = "Dados do MEC", width = 500)
 
 # INFORMAÇÕES 
-st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICAR AS INFO
+st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICiAR AS INFO
 
 # TABS 
 tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
