@@ -20,8 +20,8 @@ cd calculadora-Streamlit
 2. Crie um ambiente virtual (opcional, mas recomendado):
 ```bash
 python -m venv .venv
-source .venv/Scripts/activate  # Para Windows
-source venv/bin/activate  # Para Linux/Mac
+.venv/Scripts/activate  # Para Windows
+venv/bin/activate  # Para Linux/Mac
 
 ```
 
