@@ -91,7 +91,7 @@ with col2:
 st.header('Sobre o IMC', divider = 'blue')   # TITULO PARA INICiAR AS INFO
 
 # TABS 
-tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
+tab1, tab2= st.tabs(["Obesidade Infantil", "Doenças Relacionadas"])
 
 # conteudo dos tabs 
 with tab1:
