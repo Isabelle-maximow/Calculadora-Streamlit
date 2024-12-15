@@ -95,7 +95,7 @@ tab1, tab2= st.tabs(["Obesidade Infaltil", "Doenças Relacionadas"])
 
 # conteudo dos tabs 
 with tab1:
-    st.header("Obesidade Infaltil")
+    st.header("Obesidade Infantil")
     st.markdown("""Obesidade infantil é uma condição em que uma criança tem um peso acima do normal para a sua idade e altura. De acordo com a OMS, uma criança é considerada obesa quando o seu IMC está acima do percentil 97 para o seu sexo e idade. 
 A obesidade infantil é um problema de saúde pública complexo que pode levar a uma série de doenças crônicas, como:
 Diabetes, Colesterol alto, Hipertensão, Doenças cardiovasculares, Câncer, Doenças respiratórias. 
