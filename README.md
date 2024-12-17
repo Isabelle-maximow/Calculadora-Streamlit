@@ -36,9 +36,9 @@ streamlit run main1.py
 ```
 ## Recomendações
 - Para uma melhor visualização recomendo alterar a aparencia e o tema. Você pode fazer isso indo em:
-  1. Settings
-  2. Selecionar o modo "Wilde mode"
-  3. Em theme, selecionar opção "Light" 
+  - Settings
+  - Selecionar o modo "Wilde mode"
+  - Em theme, selecionar opção "Light" 
 
   
 ## 📝 Funcionalidades
