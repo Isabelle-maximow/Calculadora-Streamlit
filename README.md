@@ -34,7 +34,13 @@ pip install streamlit
 ```bash	
 streamlit run main1.py
 ```
+## Recomendações
+- Para uma melhor visualização recomendo alterar a aparencia e o tema. Você pode fazer isso indo em:
+  1. Settings
+  2. Selecionar o modo "Wilde mode"
+  3. Em theme, selecionar opção "Light" 
 
+  
 ## 📝 Funcionalidades
 - Entrada de dados: Permite que o usuário insira seu peso (em kg) e altura (em metros).
 - Comparação com IMC ideal: O valor calculado é comparado com o IMC ideal de 21.7.
